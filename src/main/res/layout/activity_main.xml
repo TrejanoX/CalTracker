@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#121212">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:id="@+id/tvAppName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CalTracker Dashboard"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvUserWelcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome, User"
+                    android:textSize="14sp"
+                    android:textColor="#BB86FC"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnLogOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:backgroundTint="#FF5252"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:text="Log Out" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#1E1E1E"
+            android:elevation="4dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:id="@+id/tvCalorieSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Net Calories: 0 / 2000 kcal"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
+
+            <ProgressBar
+                android:id="@+id/progressBarCalories"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="12dp"
+                android:max="2000"
+                android:progress="0"
+                android:progressTint="#BB86FC" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="#1E1E1E"
+            android:elevation="4dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvWaterSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hydration Status"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvWaterCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 / 8 Glasses consumed"
+                    android:textSize="14sp"
+                    android:textColor="#03DAC5"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnLogWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#03DAC5"
+                android:textColor="#121212"
+                android:textStyle="bold"
+                android:text="+1 Glass" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log Food Intake"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/etFoodCalories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Calories (e.g., 350)"
+            android:textColorHint="#888888"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:inputType="number" />
+
+        <RadioGroup
+            android:id="@+id/rgMealCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/rbBreakfast" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Breakfast" android:textColor="#FFFFFF" android:buttonTint="#BB86FC" android:checked="true"/>
+            <RadioButton android:id="@+id/rbLunch" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Lunch" android:textColor="#FFFFFF" android:buttonTint="#BB86FC"/>
+            <RadioButton android:id="@+id/rbDinner" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Dinner" android:textColor="#FFFFFF" android:buttonTint="#BB86FC"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnAddFood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Meal"
+            android:backgroundTint="#BB86FC"
+            android:textColor="#121212"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quick Add Favorites"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#BB86FC"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/btnPresetLight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="+100\nSnack"
+                android:textSize="11sp"
+                android:backgroundTint="#2E2E2E"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btnPresetMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:text="+200\nLight"
+                android:textSize="11sp"
+                android:backgroundTint="#2E2E2E"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btnPresetHeavy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:text="+300\nMeal"
+                android:textSize="11sp"
+                android:backgroundTint="#2E2E2E"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log Exercise"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/etBurnedCalories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Calories Burned (e.g., 200)"
+            android:textColorHint="#888888"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btnLogExercise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log Exercise"
+            android:backgroundTint="#BB86FC"
+            android:textColor="#121212"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BMI Calculator"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/etWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Weight (kg)"
+            android:textColorHint="#888888"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Height (cm)"
+            android:textColorHint="#888888"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/btnCalculateBMI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#BB86FC"
+            android:textColor="#121212"
+            android:text="Calculate BMI" />
+
+        <TextView
+            android:id="@+id/tvBMIResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="BMI: --"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daily Activities Log"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:id="@+id/llHistoryLogContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1E1E1E"
+            android:padding="12dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="40dp">
+
+            <TextView
+                android:id="@+id/tvEmptyHistoryPlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No activities logged yet for today."
+                android:textColor="#888888"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

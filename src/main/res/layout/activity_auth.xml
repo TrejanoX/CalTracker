@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvAuthTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CalTracker Login"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="32dp"/>
+
+        <EditText
+            android:id="@+id/etAuthUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Create Username"
+            android:textColorHint="#888888"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:inputType="text"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etAuthEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email Address"
+            android:textColorHint="#888888"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="16dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/etAuthPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:textColorHint="#888888"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#FFFFFF"
+                android:inputType="textPassword"
+                android:layout_toStartOf="@+id/btnTogglePasswordVisibility" />
+
+            <ImageButton
+                android:id="@+id/btnTogglePasswordVisibility"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@android:drawable/ic_menu_view"
+                android:contentDescription="Toggle Visibility" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:textColor="#BB86FC"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_gravity="end"
+            android:layout_marginBottom="24dp"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <Button
+            android:id="@+id/btnMainAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:backgroundTint="#BB86FC"
+            android:textColor="#121212"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:id="@+id/tvToggleMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account? Register here"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+</ScrollView>
